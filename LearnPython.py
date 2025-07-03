@@ -255,6 +255,11 @@ my_set1 = {1,2,3}
 # 原集合内容不变，得到一个新集合
 set_union = my_set1.union(my_set2)
 
+# 取交集
+my_set1 = {1,2,3}
+# 原集合内容不变，得到一个新集合
+set_intersection = my_set1.intersection(my_set2)
+
 # 由于集合去重，所以使用len()时，只统计不重复的元素个数
 
 # 集合不支持下标操作，故while循环无效，只可使用for
@@ -319,16 +324,33 @@ file = open("D:/DevelopingSoftware/Pycharm/PythonProject/LearnPython.py", 'r', e
 # 关闭文件
 file.close()    #file.close()内置了file.flush()
 # 可以使用with open(path, way, encoding) as <file>: 方法来进行读取，读取后自动关闭文件
-with open("D:/DevelopingSoftware/Pycharm/PythonProject/LearnPython.py", 'r', encoding='UTF-8') as file:
-   file.read()
+with open("D:\\DevelopingSoftware\\Pycharm\\PythonProject\\test.txt", 'w', encoding='UTF-8') as file:
+   file.write("print(1)")
 
 with open("D:\\DevelopingSoftware\\Pycharm\\PythonProject\\test.txt", 'w', encoding='UTF-8') as file:
     file.write("The same to you")
     file.flush()
 
-
-
-
+def Split_English_and_Chinese(string):
+    """
+    分割中文与英文
+    :param string:待分割字符串
+    """
+    English_string = []
+    Chinese_string = []
+    switch = -1
+    for i in string:
+        if 'a' <= i <= 'z' or 'A' <= i <= 'Z' or i == ' ':
+            if switch == 0:
+                English_string.append(' ')
+            English_string.append(i)
+            switch = 1
+        else:
+            Chinese_string.append(i)
+            switch = 0
+    print("".join(English_string).strip(' '))
+    print("".join(Chinese_string))
+# Split_English_and_Chinese("我I很am厉害very good")
 
 
 
