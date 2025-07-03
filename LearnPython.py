@@ -322,7 +322,7 @@ file.close()    #file.close()内置了file.flush()
 with open("D:/DevelopingSoftware/Pycharm/PythonProject/LearnPython.py", 'r', encoding='UTF-8') as file:
    file.read()
 
-with open("D:/DevelopingSoftware/Pycharm/PythonProject/LearnPython.py", 'w', encoding='UTF-8') as file:
+with open("D:\\DevelopingSoftware\\Pycharm\\PythonProject\\test.txt", 'w', encoding='UTF-8') as file:
     file.write("The same to you")
     file.flush()
 
