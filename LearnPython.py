@@ -316,20 +316,21 @@ def Caesar_encryption():
         else:
             print(i,end='')
 
-file = open("D:/DevelopingSoftware/Pycharm/PythonProject/LearnPython.py", 'r', encoding='UTF-8')
-# 读取文件字符file.read(字符数) 输出结果为str
-# 按行读取file.readlines() 输出结果为一个列表，每一行作为一个元素，且会读出\n
-# 每次读取一行file.readline() 输出结果为一个字符串，不会读出\n
+def File_learn():
+    file = open("D:/DevelopingSoftware/Pycharm/PythonProject/LearnPython.py", 'r', encoding='UTF-8')
+    # 读取文件字符file.read(字符数) 输出结果为str
+    # 按行读取file.readlines() 输出结果为一个列表，每一行作为一个元素，且会读出\n
+    # 每次读取一行file.readline() 输出结果为一个字符串，不会读出\n
 
-# 关闭文件
-file.close()    #file.close()内置了file.flush()
-# 可以使用with open(path, way, encoding) as <file>: 方法来进行读取，读取后自动关闭文件
-with open("D:\\DevelopingSoftware\\Pycharm\\PythonProject\\test.txt", 'w', encoding='UTF-8') as file:
-   file.write("print(1)")
+    # 关闭文件
+    file.close()    #file.close()内置了file.flush()
+    # 可以使用with open(path, way, encoding) as <file>: 方法来进行读取，读取后自动关闭文件
+    with open("D:\\DevelopingSoftware\\Pycharm\\PythonProject\\test.txt", 'w', encoding='UTF-8') as file:
+       file.write("print(1)")
 
-with open("D:\\DevelopingSoftware\\Pycharm\\PythonProject\\test.txt", 'w', encoding='UTF-8') as file:
-    file.write("The same to you")
-    file.flush()
+    with open("D:\\DevelopingSoftware\\Pycharm\\PythonProject\\test.txt", 'w', encoding='UTF-8') as file:
+        file.write("The same to you")
+        file.flush()
 
 def Split_English_and_Chinese(string):
     """
@@ -352,7 +353,51 @@ def Split_English_and_Chinese(string):
     print("".join(Chinese_string))
 # Split_English_and_Chinese("我I很am厉害very good")
 
+# 捕获异常
+def Catch_exceptions():
+    try:
+        1 / 1
+    except ZeroDivisionError:
+        print(1)
+    except Exception as e:
+        print(e)
+    else:
+        print(0)
+    finally:
+        print(2)
 
+# 异常传递
+def Exception_deliver():
+    def func1():
+        print(1)
+        num = 1 / 0
+        print(2)
+
+    def func2():
+        print(3)
+        func1()
+        print(4)
+
+    def main():
+        print(5)
+        try:
+            func2()
+        except ZeroDivisionError as e:
+            print(7)
+        print(6)
+
+    main()
+
+def _10to2(num):
+    res = ''
+    while True:                     #循环执行
+        res = str(num % 2) + res    #将num对2取余，得到0和1，再加到res前面
+        num = num // 2              #将num对2整除，去除0和1，再进行循环
+        if num == 0:                #判断循环退出条件
+            break
+    while len(res) < 8:             #当res不足8位时，在res前面加0
+        res = '0' + res
+    return res
 
 
 
