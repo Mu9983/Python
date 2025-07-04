@@ -29,6 +29,8 @@ elif {表达式}:
 else:
     {执行命令}
 """
+
+
 # #################
 """
 while {表达式}:
@@ -399,10 +401,27 @@ def _10to2(num):
         res = '0' + res
     return res
 
+def Learn_json():
+    import json
+    data = [{"name":"Tom", "age":12}, {"name":"Rose", "age":16}, {"name":"韩庆伊", "age":20}]
+    data_json = json.dumps(data, ensure_ascii=False)
+    python_data = json.loads(data_json)
+    print(type(data_json), data_json)
+    print(type(python_data), python_data)
 
+def picture_pyecharts():
+    from pyecharts import charts
+    line = charts.Line()
+    line.add_xaxis(["中国", "美国", "日本"])
+    line.add_yaxis("GDP", [30, 20, 10])
+    from pyecharts import options
+    line.set_global_opts(title_opts=options.TitleOpts(title="GDP的展示图", pos_left="center", pos_bottom="2%"),
+                         legend_opts=options.LegendOpts(is_show=True),
+                         toolbox_opts=options.ToolboxOpts(is_show=True),
+                         visualmap_opts=options.VisualMapOpts(is_show=True, pos_top="center"))
+    line.render()
 
-
-
+picture_pyecharts()
 
 
 
