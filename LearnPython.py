@@ -421,7 +421,125 @@ def picture_pyecharts():
                          visualmap_opts=options.VisualMapOpts(is_show=True, pos_top="center"))
     line.render()
 
-picture_pyecharts()
+def split_word(string):
+    str = ''
+    for i in string:
+        if 'a' <= i <= 'z' or 'A' <= i <= 'Z':
+            str += i
+        else:
+            str += '.'
+    word = str.split('.')
+
+    wordC = {}
+
+    for i in word:
+        if i in wordC:
+            wordC[i] += 1
+        else:
+            wordC[i] = 1
+
+    print(wordC)
+
+def Internet():
+    from urllib.request import urlopen
+    content = urlopen("https://www.hitwh.edu.cn/")
+    print("http header:", content.info())
+    print("http status:", content.getcode())
+    print("url:", content.geturl())
+    i = 0
+    print('content:')
+    for line in content.readlines():
+        print(line.decode('UTF-8'))
+        i = i + 1
+        if i > 30:
+            break
+
+def data_analysis():
+    with open("D:\\BaiduNetdiskDownload\\us-countries\\us-counties.txt", 'r', encoding='UTF-8') as file:
+        us_list = file.readlines()
+        date = [0]
+        case = []
+        death = []
+        for i in us_list[1:]:
+            temp_list = i.split(',')
+            if temp_list[0] != date[-1]:
+                date.append(temp_list[0])
+                case.append(int(temp_list[3]))
+                death.append(int((temp_list[4][:-1])))
+            else:
+                case[-1] += int(temp_list[3])
+                death[-1] += int(temp_list[4][:-1])
+    del date[0]
+    from pyecharts import charts
+    from pyecharts import options
+    line = charts.Line()
+    line.add_xaxis(date)
+    line.add_yaxis("新增确诊病例", case, label_opts=options.LabelOpts(is_show=False))
+    line.add_yaxis("新增死亡病例", death, label_opts=options.LabelOpts(is_show=False))
+    line.set_global_opts(title_opts=options.TitleOpts(is_show=True, title="美国确诊病例日期变化图", pos_left="center", pos_bottom='2%'),
+                         toolbox_opts=options.ToolboxOpts(is_show=True),
+                         legend_opts=options.LegendOpts(is_show=True),
+                         visualmap_opts=options.VisualMapOpts(is_show=True, pos_bottom="center"))
+    line.render()
+
+def map_data_analysis():
+    with open("D:\\BaiduNetdiskDownload\\us-countries\\us-counties.txt", 'r', encoding='UTF-8') as file:
+        us_list = file.readlines()
+    temp_dict = {}
+    data_list = []
+    for i in us_list[1:]:
+        temp_list = i.split(',')
+        if temp_list[2] != temp_dict.keys():
+            temp_dict[temp_list[2]] = int(temp_list[3])
+        else:
+            temp_dict[temp_list[2]] += int(temp_list[3])
+    for i in temp_dict:
+        data_list.append((i, temp_dict[i]))
+    from pyecharts import charts
+    map = charts.Map()
+    map.add("美国各洲新冠病例", data_list, "america")
+    map.render()
+
+def dynamics_GDP():
+    with open("D:\\BaiduNetdiskDownload\\us-countries\\动态柱状图数据\\1960-2019全球GDP数据.txt", 'r', encoding='ANSI') as file:
+        gdp_list = file.readlines()
+    data_dict = {}
+    for i in gdp_list[1:]:
+        temp_list = i.split(',')
+        try:
+            data_dict[int(temp_list[0])].append([temp_list[1], float(temp_list[2][:-1])])
+        except KeyError:
+            data_dict[int(temp_list[0])] = [[temp_list[1], float(temp_list[2][:-1])]]
+    from pyecharts.charts import Bar, Timeline
+    from pyecharts import options
+    timeline = Timeline()
+    for i in data_dict.keys():
+        data_dict[i].sort(key=lambda element:element[1], reverse=False)
+        data_dict[i] = data_dict[i][-8:]
+        bar = Bar()
+        country = []
+        GDP = []
+        for j in data_dict[i]:
+            country.append(j[0])
+            GDP.append(j[1] / 10**8)
+        bar.add_xaxis(country)
+        bar.add_yaxis("GDP(亿)", GDP, label_opts=options.LabelOpts(position="right"))
+        bar.reversal_axis()
+        bar.set_global_opts(title_opts=options.TitleOpts(title=f"{i}年的GDP排名", pos_left="center", pos_top="5%"))
+        timeline.add(bar, i)
+        timeline.render("1960~2019年GDP前8名国家.html")
+        timeline.add_schema(is_auto_play=True, play_interval=1000, is_loop_play=False)
+dynamics_GDP()
+
+
+
+
+
+
+
+
+
+
 
 
 
