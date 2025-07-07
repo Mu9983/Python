@@ -480,7 +480,7 @@ def data_analysis():
                          toolbox_opts=options.ToolboxOpts(is_show=True),
                          legend_opts=options.LegendOpts(is_show=True),
                          visualmap_opts=options.VisualMapOpts(is_show=True, pos_bottom="center"))
-    line.render()
+    line.render("美国确诊病例日期变化图.html")
 
 def map_data_analysis():
     with open("D:\\BaiduNetdiskDownload\\us-countries\\us-counties.txt", 'r', encoding='UTF-8') as file:
@@ -498,7 +498,7 @@ def map_data_analysis():
     from pyecharts import charts
     map = charts.Map()
     map.add("美国各洲新冠病例", data_list, "america")
-    map.render()
+    map.render("美国各州新冠确诊病例.html")
 
 def dynamics_GDP():
     with open("D:\\BaiduNetdiskDownload\\us-countries\\动态柱状图数据\\1960-2019全球GDP数据.txt", 'r', encoding='ANSI') as file:
@@ -529,7 +529,9 @@ def dynamics_GDP():
         timeline.add(bar, i)
         timeline.render("1960~2019年GDP前8名国家.html")
         timeline.add_schema(is_auto_play=True, play_interval=1000, is_loop_play=False)
-dynamics_GDP()
+
+
+
 
 
 
