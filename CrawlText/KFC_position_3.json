@@ -1,0 +1,65 @@
+{
+  "Table": [
+    {
+      "rowcount": 27
+    }
+  ],
+  "Table1": [
+    {
+      "rownum": 21,
+      "storeName": "威海九龙城",
+      "addressDetail": "经济技术开发区大庆路-53号-101威海九龙城休闲购物广场一层L139号铺位",
+      "pro": "手机点餐",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 22,
+      "storeName": "威海九龙城",
+      "addressDetail": "经济技术开发区大庆路-53号-101威海九龙城休闲购物广场一层L139号铺位",
+      "pro": "手机点餐",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 23,
+      "storeName": "乳山九龙汇",
+      "addressDetail": "新华街九龙汇购物广场",
+      "pro": "手机点餐",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 24,
+      "storeName": "青岛肯德基有限公司威海文化西路国际海水浴场新零售小站",
+      "addressDetail": "国际海水浴场游客中心西侧20米肯德基新零售小站",
+      "pro": "手机点餐",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 25,
+      "storeName": "青岛肯德基有限公司威海文化西路国际海水浴场新零售小站",
+      "addressDetail": "国际海水浴场游客中心西侧20米肯德基新零售小站",
+      "pro": "手机点餐",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 26,
+      "storeName": "青岛肯德基有限公司威海高区九龙汇",
+      "addressDetail": "大连路155号威海高区九龙汇一层L119号铺位",
+      "pro": "手机点餐",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 27,
+      "storeName": "青岛肯德基有限公司威海高区九龙汇",
+      "addressDetail": "大连路155号威海高区九龙汇一层L119号铺位",
+      "pro": "手机点餐",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    }
+  ]
+}

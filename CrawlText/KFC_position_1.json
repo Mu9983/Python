@@ -1,0 +1,89 @@
+{
+  "Table": [
+    {
+      "rowcount": 27
+    }
+  ],
+  "Table1": [
+    {
+      "rownum": 1,
+      "storeName": "海滨",
+      "addressDetail": "海滨北路128号,面临青岛路一层",
+      "pro": "Wi-Fi,点唱机,店内参观,礼品卡",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 2,
+      "storeName": "昆嵛",
+      "addressDetail": "文登区文山路36-3号万春百货一、二层",
+      "pro": "Wi-Fi,店内参观,礼品卡",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 3,
+      "storeName": "青岛路",
+      "addressDetail": "青岛中路128号豪业圣迪广场一层",
+      "pro": "Wi-Fi,点唱机,店内参观,礼品卡",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 4,
+      "storeName": "成山",
+      "addressDetail": "成山大道中段荣成大润发一层",
+      "pro": "24小时,Wi-Fi,店内参观,礼品卡",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 5,
+      "storeName": "文化西路",
+      "addressDetail": "威海文化路西路160号盛德大厦一层肯德基有限公司",
+      "pro": "24小时,点唱机,店内参观,礼品卡",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 6,
+      "storeName": "和平二",
+      "addressDetail": "和平路18号威海苏宁电器广场东南角一层。",
+      "pro": "点唱机,店内参观,礼品卡",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 7,
+      "storeName": "文登大润发餐厅",
+      "addressDetail": "文登市昆嵛路西、横山路南地块上文登大润发一层。",
+      "pro": "Wi-Fi,点唱机,店内参观,礼品卡",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 8,
+      "storeName": "渔人码头",
+      "addressDetail": "石岛黄海南路118号石岛渔人码头商业街黄海南路正门北临一层、二层",
+      "pro": "礼品卡",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 9,
+      "storeName": "海兴",
+      "addressDetail": "海滨路西浮发玻璃厂东地号为：108-6中石化威海分公司第38加油站北端地块",
+      "pro": "24小时,Wi-Fi,点唱机,店内参观,礼品卡",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 10,
+      "storeName": "威海齐鲁商城",
+      "addressDetail": "齐鲁大道85-1号一层。",
+      "pro": "Wi-Fi,点唱机,礼品卡",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    }
+  ]
+}

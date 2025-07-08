@@ -1,0 +1,89 @@
+{
+  "Table": [
+    {
+      "rowcount": 27
+    }
+  ],
+  "Table1": [
+    {
+      "rownum": 11,
+      "storeName": "古寨",
+      "addressDetail": "世昌大道100号宏福广场地上一层肯德基有限公司",
+      "pro": "店内参观,礼品卡",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 12,
+      "storeName": "商业街（0631-6861068威海乳山利群）",
+      "addressDetail": "商业街东段南侧利群集团乳山购物广场一层东北角。",
+      "pro": "Wi-Fi,店内参观,礼品卡",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 13,
+      "storeName": "威高广场餐厅",
+      "addressDetail": "新威路17-5号负1楼L-150   甜品站位于威高一楼肯德基",
+      "pro": "Wi-Fi",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 14,
+      "storeName": "樱花湖",
+      "addressDetail": "悦湖路91号荣成九龙城购物广场一层",
+      "pro": "Wi-Fi",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 15,
+      "storeName": "方邻海汇",
+      "addressDetail": "理想山小区-1号威海方邻海汇Mall一层入口东临114号铺位",
+      "pro": "Wi-Fi,点唱机,店内参观",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 16,
+      "storeName": "欧乐坊",
+      "addressDetail": "世昌大道268-2号高新欧乐坊B3#楼一层16、17号铺位",
+      "pro": "Wi-Fi,点唱机,店内参观,手机点餐",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 17,
+      "storeName": "威海万达广场",
+      "addressDetail": "仙姑顶路120号威海万达广场一层1001铺位",
+      "pro": "Wi-Fi,点唱机",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 18,
+      "storeName": "威海万达广场",
+      "addressDetail": "仙姑顶路120号威海万达广场一层1001铺位",
+      "pro": "Wi-Fi,点唱机",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 19,
+      "storeName": "青岛肯德基有限公司威海站",
+      "addressDetail": "威海站WH-02号场地",
+      "pro": "景点店",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    },
+    {
+      "rownum": 20,
+      "storeName": "青岛肯德基有限公司威海站",
+      "addressDetail": "威海站WH-02号场地",
+      "pro": "景点店",
+      "provinceName": "山东省",
+      "cityName": "威海市"
+    }
+  ]
+}
