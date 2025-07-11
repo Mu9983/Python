@@ -30,7 +30,6 @@ else:
     {执行命令}
 """
 
-
 # #################
 """
 while {表达式}:
@@ -384,7 +383,7 @@ def Exception_deliver():
         print(5)
         try:
             func2()
-        except ZeroDivisionError as e:
+        except ZeroDivisionError:
             print(7)
         print(6)
 
@@ -529,6 +528,64 @@ def dynamics_GDP():
         timeline.add(bar, i)
         timeline.render("1960~2019年GDP前8名国家.html")
         timeline.add_schema(is_auto_play=True, play_interval=1000, is_loop_play=False)
+
+class Student:
+    def __init__(self, name, age, gender):  # 构造函数，类似C++中的Student()
+        self.name = name
+        self.age = age
+        self.gender = gender
+    def __lt__(self, other):                # 重载<，类似C++中的operator<()
+        return self.age < other.age
+    def __le__(self, other):                # 重载<=，类似C++中的operator<=()
+        return self.age <= other.age
+    def __eq__(self, other):                # 重载==，类似C++中的operator==()
+        return self.age == other.age
+    def __del__(self):                      # 析构函数，类似C++中的~Student()
+        pass
+    def __str__(self):
+        return str((self.name, self.age, self.gender))
+
+# 继承，类似于C++中的继承
+class Phone1:
+    IMET = None
+    producer = "华为"
+class Phone2(Phone1):                       # 继承直接把父类当成参数传给子类，类似C++中的继承，class Phone2 : public Phone1 {}
+    pass
+
+def Exemple(name:str, age:int, grade:list[dict[str,int]]):
+    print(type(name))
+
+class MyInteger():  # 简易的迭代器
+    def __init__(self, strat_integer, end_integer):
+        self.strat_integer = strat_integer
+        self.end_integer = end_integer
+    def __iter__(self):
+        return self
+    def __next__(self):
+        if self.strat_integer > self.end_integer:
+            raise StopIteration
+        temp = self.strat_integer
+        self.strat_integer += 1
+        return temp
+import time
+def outer(func):
+    def inner(func):
+        print(1)
+        func()
+        print(2)
+    return inner
+
+def sleep():
+    print(3)
+    time.sleep(3)
+    print(4)
+
+import pickle
+file = open("./pickle.pickle", 'wb')
+pickle.dumps({'1':1}, file)
+
+
+
 
 
 

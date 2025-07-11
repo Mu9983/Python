@@ -200,7 +200,7 @@ def Handler():
 
 
 def replace_ip():
-    url = 'https://baidu.com/s?wd=ip'
+    url = 'http://baidu.com/s?wd=ip'
     headers = {'user-agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0'}
     request1 = request.Request(url=url, headers=headers)
     # 代理ip：proxy
@@ -218,7 +218,8 @@ def replace_ip():
 
 
 
-replace_ip()
+
+
 
 
 
