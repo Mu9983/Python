@@ -567,30 +567,23 @@ class MyInteger():  # 简易的迭代器
         temp = self.strat_integer
         self.strat_integer += 1
         return temp
+
+
 import time
 def outer(func):
-    def inner(func):
+    def inner():
         print(1)
         func()
         print(2)
     return inner
 
+@outer
 def sleep():
     print(3)
     time.sleep(3)
     print(4)
 
-import pickle
-file = open("./pickle.pickle", 'wb')
-pickle.dumps({'1':1}, file)
-
-
-
-
-
-
-
-
+sleep()
 
 
 

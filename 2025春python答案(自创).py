@@ -1,3 +1,6 @@
+
+
+
 def Examination_01():
     num = input("请输入数字:")
     try:
@@ -36,17 +39,30 @@ def Examination_03():
             print("账户冻结")
 
 
-def Examination_04():
-    
+def Examination_07():
+    import time
 
+    def measure_time(func):
+        def wrapper(*args, **kwargs):
+            start_time = time.time()  # 记录开始时间
+            result = func(*args, **kwargs)  # 执行原函数
+            end_time = time.time()  # 记录结束时间
+            elapsed_time = end_time - start_time  # 计算耗时
+            print(f"函数 {func.__name__} 执行耗时: {elapsed_time:f} 秒")
+            return result  # 返回原函数的结果
 
+        return wrapper
 
+    @measure_time
+    def B(x, y):
+        try:
+            return x / y
+        except ZeroDivisionError:
+            print("y=0")
 
+    B(1, 4)
 
-
-
-
-
+Examination_07()
 
 
 
